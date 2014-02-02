@@ -41,55 +41,75 @@ while ($i < $numRows) {
     echo "<b>$uName :</b>Altcoin=> $uAltCoin,Address: $uWalletAddress,UserBalance: $uBalance,Name: $walletName,Balance: $globalBalance<hr><br>";
     echo "<b>Starting transactions.....</b>Amount to spread : $amountSpread";
 
+    if ($globalBalance > 100) {
+        // Starting Transactions.....
+        $resultTransaction = array();
+        $resultTransaction = start_transaction($uAltCoin, $uWalletAddress, $amountSpread, $uName, $uBalance);
 
-    // Starting Transactions.....
-    $resultTransaction = array();
-    $resultTransaction = start_transaction($uAltCoin, $uWalletAddress, $amountSpread, $uName);
+        echo "<b>TxId</b>,", implode($resultTransaction);
 
-    echo "<b>TxId</b>,", implode($resultTransaction);
+        if ($db_opened == false) {
+            $db_opened = true;
+            mysql_connect($localhost, $username, $password);
+            @mysql_select_db($database) or die("Unable to select database");
+        }
 
-    if ($db_opened == false) {
-        $db_opened = true;
-        mysql_connect($localhost, $username, $password);
-        @mysql_select_db($database) or die("Unable to select database");
-        $db_opened = true;
         if ($resultTransaction['TransactionId']) {
             $query = "";
-            $query = build_query($resultTransaction);
+            $query = send_query($resultTransaction);
             $retVal = mysql_query($query);
             if (!$retVal) {
                 die('Could not enter data: ' . mysql_error());
             } else {
-// Commit ?
+                // Update User Balance
+                $balance_out = $resultTransaction['BalanceOut'];
+                $query = "";
+                $query = "UPDATE usersdefinition SET UserBalance = '$balance_out' WHERE UserAltCoin ='$uAltCoin' AND UserName ='$uName'";
+                $retVal = mysql_query($query);
+                if (!$retVal) {
+                    die('Could not enter data: ' . mysql_error());
+                }
             }
         }
+
     }
     $i++;
 } //EndWhile User Table
+if ($db_opened == true) {
+    mysql_close();
+}
 
 
-function build_query($_input)
+function send_query($_input)
 {
     if (is_array($_input)) {
         $query = "";
+        $Id = "";
         $user = $_input['UserAltCoin'];
         $address = $_input['UserWalletAddress'];
         $TransactionId = $_input['TransactionId'];
         $RequestDate = $_input['RequestDate'];
         $CommitDate = $_input['CommitDate'];
         $TransactionAmount = $_input['TransactionAmount'];
-        $BalanceIn = "";
-        $BalanceOut = "";
-        $timestamp = "";
-//        INSERT INTO `altcoin`.`altcointransaction` (`UserAltCoin`, `UserWalletAddress`, `TransactionId`, `RequestDate`, `CommitDate`, `TransactionAmount`) VALUES ('David', '1234567', '10', '2014-01-30', '2014-01-30', '100');
-//        ('UserAltCoin', 'UserWalletAddress', 'TransactionId', 'RequestDate', 'CommitDate', 'TransactionAmount')
-        $query = "INSERT INTO altcointransaction VALUES ('$user','$address','$TransactionId','$RequestDate','$CommitDate','$TransactionAmount', '$BalanceIn', '$BalanceOut', '$timestamp')";
+        $BalanceIn = $_input['BalanceIn'];
+        $BalanceOut = $_input['BalanceOut'];;
+        $Timestamp = date('Y-m-d H:i:s');
+        if ($_input['TransactionId']) {
+            $Status = "Ok";
+        } else {
+            $Status = "Nok";
+        }
+
+//        INSERT INTO `altcoin`.`altcointransaction` (`UserAltCoin`, `UserWalletAddress`, `TransactionId`, `RequestDate`, `CommitDate`, `TransactionAmount`, `BalanceIn`, `BalanceOut`, `Status`) VALUES ('David', '1234567', '000000', '2014-12-31', '2014-12-31', '100', '100', '200', 'OK');
+
+//        $query = "INSERT INTO altcointransaction ('UserAltCoin', 'UserWalletAddress', 'TransactionId', 'RequestDate', 'CommitDate', 'TransactionAmount', 'BalanceIn', 'BalanceOut', 'Timestamp', 'Status') VALUES ('$user', '$address', '$TransactionId', '$RequestDate', '$CommitDate', '$TransactionAmount', '$BalanceIn', '$BalanceOut', '$Timestamp', '$Status')";
+        $query = "INSERT INTO altcointransaction VALUES ('$user', '$address', '$TransactionId', '$RequestDate', '$CommitDate', '$TransactionAmount', '$BalanceIn', '$BalanceOut', '$Timestamp', '$Status')";
         return $query;
     }
 }
 
 
-function start_transaction($_altCoin, $_address, $_amount, $_user, $_balance, $_debug = null)
+function start_transaction($_altCoin, $_address, $_amount, $_user, $_uBalance, $_debug = null)
 {
     $transactionResult = array();
 
@@ -128,6 +148,8 @@ function start_transaction($_altCoin, $_address, $_amount, $_user, $_balance, $_
     $transactionResult['RequestDate'] = date("Y-m-d"); //$time_start;
     $transactionResult['CommitDate'] = date("Y-m-d"); //$time_end;
     $transactionResult['TransactionAmount'] = $_amount;
+    $transactionResult['BalanceIn'] = $_uBalance;
+    $transactionResult['BalanceOut'] = $_uBalance + $_amount;
 
     return ($transactionResult);
 
