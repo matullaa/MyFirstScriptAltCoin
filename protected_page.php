@@ -9,14 +9,20 @@ sec_session_start();
 <head>
     <meta charset="UTF-8">
     <title>Secure Login: Protected Page</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css"/>
+    <script
+        id="sap-ui-bootstrap"
+        src='https://openui5.hana.ondemand.com/resources/sap-ui-core.js'
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_bluecrystal">
+    </script>
 </head>
 <body>
 <?php if (login_check($mysqli) == true) : ?>
     <p>Welcome <?php echo htmlentities($_SESSION['username']); ?>!</p>
     <p>
-        This is an example protected page.  To access this page, users
-        must be logged in.  At some stage, we'll also check the role of
+        This is an example protected page. To access this page, users
+        must be logged in. At some stage, we'll also check the role of
         the user, so pages will be able to determine the type of user
         authorised to access the page.
     </p>

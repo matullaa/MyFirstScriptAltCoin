@@ -9,3 +9,16 @@ if (isset($_GET['success'])) {
     echo "<b>Game Over</b>";
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Pognon</title>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+<h1>Login</h1>
+
+<p>You can now go <a href="login.php">login page</a> and log in</p>
+</body>
+</html>

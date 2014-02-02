@@ -18,4 +18,4 @@ setcookie(session_name(),
 
 // Destroy session
 session_destroy();
-header('Location: ../index.php&success=You have been unlogged!!');
+header('Location: ../index.php');

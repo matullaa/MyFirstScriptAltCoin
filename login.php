@@ -13,7 +13,7 @@ if (login_check($mysqli) == true) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Easy Pognon: Log In</title>
+    <title>Easy Pognon: LogIn</title>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
     <link rel="stylesheet" href="styles/main.css"/>
     <link href="login-box.css" rel="stylesheet" type="text/css"/>
@@ -34,21 +34,60 @@ if (isset($_GET['error'])) {
 ?>
 
 
-<form action="includes/process_login.php" method="post" name="login_form">
-    Email: <input type="text" name="email"/>
-    Password: <input type="password"
-                     name="password"
-                     id="password"/>
-    <input type="button"
-           value="Login"
-           onclick="formhash(this.form, this.form.password);"/>
+<form action="includes/process_login.php" method="post" name="login_form" id="login_form">
+    <div id="login-box">
 
-    <p>If you don't have a login, please <a href="register.php">register</a></p>
+        <H2>Login</H2>
+        Easy Pognon veuillez vous connecter.
+        <br/>
+        <br/>
 
-    <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
+        <div id="login-box-name" style="margin-top:20px;">Email:</div>
+        <div id="login-box-field" style="margin-top:20px;">
+            <input name="email" id="email" class="form-login" title="Username" value="" size="30" maxlength="2048"/>
+        </div>
+        <div id="login-box-name">Password:</div>
+        <div id="login-box-field">
+            <input name="password" id="password" type="password" class="form-login" title="Password" value="" size="30"
+                   maxlength="2048"/>
+        </div>
+        <br/>
+        <span class="login-box-options">
+<!--            <a href="#" style="color: white">Forgot password?</a></span>-->
+        <br/>
+        <br/>
+        <a href="#"><img src="images/login-btn.png"
+                         onclick="formhash(document.getElementById('login_form'), document.getElementById('password'))"
+                         width="103"
+                         height="42" style="margin-left:90px;"/></a>
 
-    <p>You are currently logged <?php echo $logged ?>.</p>
+        <p>If you don't have a login, please <a href="register.php" style="color:white">register</a></p>
 
-</form>
+        <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
+
+        <p>You are currently logged <?php echo $logged ?>.</p>
+
+        <!--    <input type="button"-->
+        <!--           value="Login"-->
+        <!--           onclick="formhash(this.form, this.form.password);"/>-->
+
+
+</form>  
+<!--<form action="includes/process_login.php" method="post" name="login_form">-->
+<!--    Email: <input type="text" name="email"/>-->
+<!--    Password: <input type="password"-->
+<!--                     name="password"-->
+<!--                     id="password"/>-->
+<!--    <input type="button"-->
+<!--           value="Login"-->
+<!--           onclick="formhash(this.form, this.form.password);"/>-->
+<!---->
+<!--    <p>If you don't have a login, please <a href="register.php">register</a></p>-->
+<!---->
+<!--    <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>-->
+<!---->
+<!--    <p>You are currently logged --><?php //echo $logged ?><!--.</p>-->
+<!---->
+<!--</form>-->
 </body>
 </html>

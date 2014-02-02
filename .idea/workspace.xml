@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="062f57a4-bdf8-4f24-8216-97c63482ff6b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/.theming" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.history-dbg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.history.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.logger.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.storage-dbg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.storage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.xml-dbg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/jquery.sap.xml.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/sap-ui-core-dbg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/sap-ui-core-nojQuery-dbg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/sap-ui-core-nojQuery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/resources/sap-ui-core.js" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\example-captcha.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\.theming" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.history-dbg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.history.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.logger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.storage-dbg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.storage.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.xml-dbg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\jquery.sap.xml.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\sap-ui-core-dbg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\sap-ui-core-nojQuery-dbg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\sap-ui-core-nojQuery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\resources\sap-ui-core.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\jsonSource.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/logout.php" afterPath="$PROJECT_DIR$/includes/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page.php" afterPath="$PROJECT_DIR$/protected_page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyFirstScript.iws" />
@@ -38,19 +44,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="example-captcha.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/example-captcha.php">
+      <file leaf-file-name="login.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="55" selection-start="269" selection-end="269" vertical-scroll-proportion="-0.0" vertical-offset="153" max-vertical-offset="731">
+            <state line="74" column="9" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.5704698" vertical-offset="918" max-vertical-offset="1666">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="0" selection-start="5821" selection-end="5821" vertical-scroll-proportion="-4.6153846" vertical-offset="2855" max-vertical-offset="3451">
+              <folding>
+                <marker date="1391349445388" expanded="true" signature="1069:1164" placeholder="SELECT id, u..members..." />
+                <marker date="1391349445388" expanded="true" signature="3116:3221" placeholder="INSERT INTO ..." />
+                <marker date="1391349445388" expanded="true" signature="3688:3797" placeholder="..." />
+                <marker date="1391349445388" expanded="true" signature="3693:3797" placeholder="..." />
+                <marker date="1391349445388" expanded="true" signature="4586:4711" placeholder="SELECT passw..members..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/forms.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/login.php">
+      <file leaf-file-name="process_login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/process_login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="712" selection-end="712" vertical-scroll-proportion="0.2852349" vertical-offset="238" max-vertical-offset="1003">
+            <state line="15" column="34" selection-start="471" selection-end="471" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="442">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login-box.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login-box.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="19" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -82,12 +126,13 @@
         <option value="$PROJECT_DIR$/includes/functions.php" />
         <option value="$PROJECT_DIR$/register_success.php" />
         <option value="$PROJECT_DIR$/process_login.php" />
-        <option value="$PROJECT_DIR$/protected_page.php" />
         <option value="$PROJECT_DIR$/includes/process_login.php" />
-        <option value="$PROJECT_DIR$/includes/logout.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/example-captcha.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/logout.php" />
+        <option value="$PROJECT_DIR$/protected_page.php" />
+        <option value="$PROJECT_DIR$/login-box.css" />
         <option value="$PROJECT_DIR$/login.php" />
       </list>
     </option>
@@ -186,6 +231,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -234,8 +293,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\openui5\resources" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript" />
+      <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js\openui5\resources" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\styles" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\images" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes" />
@@ -319,12 +378,16 @@
       <created>1391369162935</created>
       <updated>1391369162935</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Login commit&#10;">
+      <created>1391371189027</created>
+      <updated>1391371189027</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17592593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -338,7 +401,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -407,17 +470,15 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/example-captcha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="55" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="13" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="918">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -431,7 +492,12 @@
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="2" selection-start="470" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="765">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -504,11 +570,6 @@
         <state line="4" column="22" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="204" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jsonSource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="255" selection-end="275" vertical-scroll-proportion="0.317757" vertical-offset="0" max-vertical-offset="535" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sources/altcoin.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="22" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="204" />
@@ -519,16 +580,6 @@
         <state line="28" column="56" selection-start="728" selection-end="728" vertical-scroll-proportion="-4.576923" vertical-offset="357" max-vertical-offset="3910">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="7" selection-start="2054" selection-end="2054" vertical-scroll-proportion="-17.23077" vertical-offset="538" max-vertical-offset="1088" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/forms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="1" selection-start="2380" selection-end="2380" vertical-scroll-proportion="0.0" vertical-offset="873" max-vertical-offset="1428" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/main.css">
@@ -548,30 +599,9 @@
         <state line="480" column="1" selection-start="17089" selection-end="17089" vertical-scroll-proportion="0.7992126" vertical-offset="7754" max-vertical-offset="8262" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register_success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="482">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="59" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/db_connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="53" selection-start="126" selection-end="126" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="1" selection-start="6330" selection-end="6330" vertical-scroll-proportion="-91.26923" vertical-offset="976" max-vertical-offset="3451">
           <folding />
         </state>
       </provider>
@@ -590,65 +620,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/process_login.php">
+    <entry file="file://$PROJECT_DIR$/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="471" selection-end="471" vertical-scroll-proportion="0.42785236" vertical-offset="0" max-vertical-offset="596">
-          <folding />
+        <state line="58" column="7" selection-start="2054" selection-end="2054" vertical-scroll-proportion="-20.0" vertical-offset="466" max-vertical-offset="1088">
+          <folding>
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391346793172" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/example-captcha.php">
+    <entry file="file://$PROJECT_DIR$/register_success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="55" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login-box.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <folding />
+        <state line="12" column="7" selection-start="0" selection-end="308" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="306">
+          <folding>
+            <marker date="1391349724655" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391349724655" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391349724655" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="51" selection-start="200" selection-end="200" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="272">
+        <state line="21" column="18" selection-start="430" selection-end="430" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="493">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/includes/logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="867">
+        <state line="20" column="31" selection-start="416" selection-end="416" vertical-scroll-proportion="-13.076923" vertical-offset="0" max-vertical-offset="442">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="109" selection-end="109" vertical-scroll-proportion="4.576923" vertical-offset="204" max-vertical-offset="595">
+        <state line="17" column="13" selection-start="473" selection-end="473" vertical-scroll-proportion="-8.5" vertical-offset="68" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/login-box-backg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="0" selection-start="5821" selection-end="5821" vertical-scroll-proportion="-4.6153846" vertical-offset="2855" max-vertical-offset="3451">
           <folding>
-            <marker date="1391349868771" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1391349868771" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1391349868771" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1391349868771" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1391349868771" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1391349445388" expanded="true" signature="1069:1164" placeholder="SELECT id, u..members..." />
+            <marker date="1391349445388" expanded="true" signature="3116:3221" placeholder="INSERT INTO ..." />
+            <marker date="1391349445388" expanded="true" signature="3688:3797" placeholder="..." />
+            <marker date="1391349445388" expanded="true" signature="3693:3797" placeholder="..." />
+            <marker date="1391349445388" expanded="true" signature="4586:4711" placeholder="SELECT passw..members..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/resources/sap-ui-core-nojQuery-dbg.js">
+    <entry file="file://$PROJECT_DIR$/js/forms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="518330">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/process_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="471" selection-end="471" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login-box.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="19" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="25" selection-start="712" selection-end="712" vertical-scroll-proportion="0.2852349" vertical-offset="238" max-vertical-offset="1003">
-          <folding />
+        <state line="74" column="9" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.5704698" vertical-offset="918" max-vertical-offset="1666">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#0;n#span#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
