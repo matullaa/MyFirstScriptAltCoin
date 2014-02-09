@@ -16,7 +16,7 @@ if (login_check($mysqli) == true) {
     <title>Easy Pognon: LogIn</title>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
     <link rel="stylesheet" href="styles/main.css"/>
-    <link href="login-box.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/login-box.css" rel="stylesheet" type="text/css"/>
     <script type="text/JavaScript" src="js/sha512.js"></script>
     <script type="text/JavaScript" src="js/forms.js"></script>
     <script
@@ -72,22 +72,6 @@ if (isset($_GET['error'])) {
         <!--           onclick="formhash(this.form, this.form.password);"/>-->
 
 
-</form>  
-<!--<form action="includes/process_login.php" method="post" name="login_form">-->
-<!--    Email: <input type="text" name="email"/>-->
-<!--    Password: <input type="password"-->
-<!--                     name="password"-->
-<!--                     id="password"/>-->
-<!--    <input type="button"-->
-<!--           value="Login"-->
-<!--           onclick="formhash(this.form, this.form.password);"/>-->
-<!---->
-<!--    <p>If you don't have a login, please <a href="register.php">register</a></p>-->
-<!---->
-<!--    <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>-->
-<!---->
-<!--    <p>You are currently logged --><?php //echo $logged ?><!--.</p>-->
-<!---->
-<!--</form>-->
+</form>
 </body>
 </html>

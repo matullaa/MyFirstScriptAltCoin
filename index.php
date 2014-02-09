@@ -1,12 +1,19 @@
 <?php
-
+$success = false;
+$error = false;
 if (isset($_GET['error'])) {
     echo '<p class="error">Error Logging In!</p>';
     echo "<b>Game Over</b>";
+    $error = true;
 }
 if (isset($_GET['success'])) {
     echo '<p class="success">you have been delogged</p>';
     echo "<b>Game Over</b>";
+    $success = true;
+}
+if ($error == false & $success == false) {
+    header('Location: login.php');
+    echo "Going to login page......";
 }
 ?>
 <!DOCTYPE html>

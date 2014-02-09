@@ -17,10 +17,10 @@
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$USER_HOME$/Documents/Works/wamp/bin/php/php5.4.3/pharcommand.phar" />
+          <root url="phar://$USER_HOME$/Documents/Works/wamp/bin/php/php5.4.16/pharcommand.phar" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$USER_HOME$/Documents/Works/wamp/bin/php/php5.4.3/pharcommand.phar" />
+          <root url="phar://$USER_HOME$/Documents/Works/wamp/bin/php/php5.4.16/pharcommand.phar" />
         </SOURCES>
       </library>
     </orderEntry>

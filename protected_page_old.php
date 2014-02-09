@@ -20,7 +20,7 @@ sec_session_start();
 
 
 <body class="sapUiBody"><h3
-    style="font-size:20px;left:30%;opacity:0.3;position:absolute;bottom:75px;z-index:9999;text-shadow:none;"></h3>
+    style="font-size:20x;left:30%;opacity:0.3;position:absolute;bottom:75px;z-index:9999;text-shadow:none;"></h3>
 
 <form>
     <div id="content"></div>
