@@ -1,6 +1,6 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
+include_once 'include/db_connect.php';
+include_once 'include/functions.php';
 
 sec_session_start();
 
@@ -34,7 +34,7 @@ if (isset($_GET['error'])) {
 ?>
 
 
-<form action="includes/process_login.php" method="post" name="login_form" id="login_form">
+<form action="include/process_login.php" method="post" name="login_form" id="login_form">
     <div id="login-box">
 
         <H2>Login</H2>
@@ -63,7 +63,7 @@ if (isset($_GET['error'])) {
 
         <p>If you don't have a login, please <a href="register.php" style="color:white">register</a></p>
 
-        <p>If you are done, please <a href="includes/logout.php">log out</a>.</p>
+        <p>If you are done, please <a href="include/logout.php">log out</a>.</p>
 
         <p>You are currently logged <?php echo $logged ?>.</p>
 

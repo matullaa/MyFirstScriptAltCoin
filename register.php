@@ -1,6 +1,6 @@
 <?php
-include_once 'includes/register.inc.php';
-include_once 'includes/functions.php';
+include_once 'include/register.inc.php';
+include_once 'include/functions.php';
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,6 @@
 <?php
-include_once 'includes/db_connect.php';
-include_once 'includes/functions.php';
+include_once 'include/db_connect.php';
+include_once 'include/functions.php';
 
 sec_session_start();
 ?>
@@ -15,7 +15,9 @@ sec_session_start();
             src="https://sapui5.netweaver.ondemand.com/resources/sap-ui-core.js"
             data-sap-ui-theme="sap_bluecrystal"
             data-sap-ui-libs="sap.m,sap.me,sap.ui.commons,sap.suite.ui.commons,sap.ui.unified,sap.ui.core"></script>
-    <script src="js/ShellTestPage.js" type="text/javascript"></script>
+    <script>document.title = "Easy Pognon"</script>
+    <script src="js/formatter.js"></script>
+    <script src="js/functions.js"></script>
 </head>
 
 
@@ -23,264 +25,267 @@ sec_session_start();
     style="font-size:20px;left:30%;opacity:0.3;position:absolute;bottom:75px;z-index:9999;text-shadow:none;"></h3>
 
 <form>
-    <div id="content"></div>
+    <div id="MobileContent"></div>
     <input type="hidden" name="applid" value="ZEASY_POGNON"></form>
+
 <script>
 
-var state, oldState = null;
+//GLOBALS
+var walletModel;
+var Shell = sap.m.Shell("Shell", {title: ""});
+Shell.placeAt("MobileContent");
+var App = new sap.m.App("App", {});
+Shell.setApp(App);
+var easyTitle = "<?php echo htmlentities($_SESSION['username']); ?> Easy Pognon ";
+var main = new sap.m.Page("main", {title: easyTitle});
+App.addPage(main);
+var barMain = new sap.m.Bar("barMain", {});
+main.setFooter(barMain);
+var settingsBut = new sap.m.Button("settingsBut", {icon: "sap-icon://settings", press: function (oEvent) {
+    App.to("settings", "flip");
+}});
+barMain.addContentRight(settingsBut);
 
+//***************** Filters main page
+var filtersTab = new sap.m.IconTabBar("filtersTab", {selectedKey: "{COIN}", select: function (oEvent) {
+    var binding = altList.getBinding("items");
+    var selected = oEvent.getParameter("selectedKey");
+    if (selected == "ALL") {
+        binding.filter([]);
+    }
+    else {
+        var filter = new sap.ui.model.Filter("Coin", "EQ", selected);
+        binding.filter([filter]);
+    }
+}});
+main.addContent(filtersTab);
+var modelfiltersTab = new sap.ui.model.json.JSONModel();
+filtersTab.setModel(modelfiltersTab);
+//var filter = new sap.m.IconTabFilter("filter", {icon: "sap-icon://save", key: "{Coin}", text: "{Coin}"});
+var filter = new sap.m.IconTabFilter("filter", {icon: "{icon}", key: "{Coin}", text: "{Coin}"});
+filtersTab.bindAggregation("items", "/", filter);
+//******************** End Filters
 
-var configItm = new sap.ui.unified.ShellHeadItem({
-    tooltip: "Configuration",
-    icon: sap.ui.core.IconPool.getIconURI("menu2"),
-    press: function () {
-        oShell.setShowPane(!oShell.getShowPane());
-        configItm.setSelected(!configItm.getSelected());
+//************************** main Altcoin List
+var altList = new sap.m.List("altList", { headerText: "Altcoin List"});
+main.addContent(altList);
+var modelaltList = new sap.ui.model.json.JSONModel();
+altList.setModel(modelaltList);
+var itemsAlt = new sap.m.ObjectListItem("items", {
+    icon: "{icon}",
+//    intro: "{Wallet}",
+    intro: {
+        parts: [
+            {path: 'Wallet'}
+        ],
+        formatter: util.Formatter.wallet
+    },
+    number: "{Balance}",
+    numberUnit: "{Coin}",
+    selected: true,
+    title: "{Coin}",
+    type: "DetailAndActive",
+    press: function (oEvent) {
+        var context = oEvent.oSource.getBindingContext();
+        var value = context.getProperty("Coin");
+        getOnlineTransactions(value);
+    },
+    detailPress: function (oEvent) {
+        var context = oEvent.oSource.getBindingContext();
+        var index = context.getPath("/").substring(1, 2);
+        var line = context.getModel().getData();
+        var walletValue = line[index];
+        walletModel = new sap.ui.model.json.JSONModel(walletValue);
+        walletHeader.setModel(walletModel);
+        walletList.setModel(walletModel);
+        App.to("walletP");
     }
 });
 
-var curtainConfigItm = new sap.ui.unified.ShellHeadItem({
-    tooltip: "Configuration",
-    icon: sap.ui.core.IconPool.getIconURI("menu2"),
-    showMarker: true,
-    press: function () {
-        oShell.setShowCurtainPane(!oShell.getShowCurtainPane());
-        curtainConfigItm.setSelected(!curtainConfigItm.getSelected());
-        curtainConfigItm.setShowMarker(!curtainConfigItm.getShowMarker());
-        sap.ui.getCore().byId("CurtainContent").setHeaderHidden(oShell.getShowCurtainPane());
+altList.bindAggregation("items", "/", itemsAlt);
+//************** End Altcoin List
+
+//***************** User Setting page and list
+var settings = new sap.m.Page("settings", {navButtonType: "Back", showHeader: true, showNavButton: true, title: "User Settings", navButtonPress: function (oEvent) {
+    App.back("main");
+}});
+App.addPage(settings);
+var userSettings = new sap.m.List("userSettings", { headerText: "User Settings"});
+settings.addContent(userSettings);
+//*************** End user Settings
+
+
+//******************************* History Transactions
+var transactions = new sap.m.Page("transactions", {navButtonType: "Back", showHeader: true, showNavButton: true, title: "Transaction Details", navButtonPress: function (oEvent) {
+    App.back("main");
+}});
+App.addPage(transactions);
+var txList = new sap.m.Table("txList", { headerText: ""});
+var modeltxList = new sap.ui.model.json.JSONModel();
+txList.setModel(modeltxList);
+transactions.addContent(txList);
+var wallet = new sap.m.Column("wallet", {header: new sap.m.Label({text: "Wallet"}), mergeDuplicates: true });
+txList.addColumn(wallet);
+var txId = new sap.m.Column("txId", {header: new sap.m.Label({text: "TxId"})});
+txList.addColumn(txId);
+//var reqDate = new sap.m.ObjectIdentifier("reqDate", {header: new sap.m.Label({text: "Req.Date"}), state: "{path:'RequestDate', formatter: 'util.Formatter.date'}"});
+var reqDate = new sap.m.Column("reqDate", {header: new sap.m.Label({text: "Req.Date"})});
+txList.addColumn(reqDate);
+var commitDate = new sap.m.Column("commitDate", {header: new sap.m.Label({text: "Com.Date"})});
+txList.addColumn(commitDate);
+var amount = new sap.m.Column("amount", {header: new sap.m.Label({text: "Amount"})});
+txList.addColumn(amount);
+var balIn = new sap.m.Column("balIn", {header: new sap.m.Label({text: "Bal.In"})});
+txList.addColumn(balIn);
+var balOut = new sap.m.Column("balOut", {header: new sap.m.Label({text: "Bal.Out"})});
+txList.addColumn(balOut);
+var tmStmp = new sap.m.Column("tmStmp", {header: new sap.m.Label({text: "TimeStamp"}), demandPopin: true});
+txList.addColumn(tmStmp);
+var stat = new sap.m.Column("status", {header: new sap.m.Label({text: "Status"})});
+txList.addColumn(status);
+var colItem = new sap.m.ColumnListItem("colItem", {});
+txList.bindAggregation("items", "/", colItem);
+var _wallet = new sap.m.Text("_wallet", {text: "{Wallet}"});
+colItem.addCell(_wallet);
+var _txId = new sap.m.Text("_txId", {text: "{TransactionId}"});
+colItem.addCell(_txId);
+var _reqDate = new sap.m.Text("_reqDate", {
+    text: {
+        parts: [
+            {path: 'RequestDate'}
+        ],
+        formatter: util.Formatter.date
     }
 });
+colItem.addCell(_reqDate);
+var _commitDate = new sap.m.Text("_commitDate",
+    {text: {
+        parts: [
+            {path: 'CommitDate'}
+        ],
+        formatter: util.Formatter.date
+    }});
+colItem.addCell(_commitDate);
+var _amount = new sap.m.Text("_amount", {text: "{Amount}"});
+colItem.addCell(_amount);
+var _balIn = new sap.m.Text("_balIn", {text: "{BalanceIn}"});
+colItem.addCell(_balIn);
+var _balOut = new sap.m.Text("_balOut", {text: "{BalanceOut}"});
+colItem.addCell(_balOut);
+var _tmStmp = new sap.m.Text("_tmStmp", {text: "{Timestamp}"});
+colItem.addCell(_tmStmp);
+var _status = new sap.m.Text("_status", {text: "{Status}"});
+colItem.addCell(_status);
 
-var homeItm = new sap.ui.unified.ShellHeadItem({
-    tooltip: "Home",
-    icon: sap.ui.core.IconPool.getIconURI("home"),
-    press: function () {
-        setState("HOME");
-    }
+//************************* Wallet Detail Page
+var walletP = new sap.m.Page("walletP", {navButtonType: "Back", showHeader: true, showNavButton: true, title: "Wallet Detail", navButtonPress: function (oEvent) {
+    App.back("main");
+}});
+App.addPage(walletP);
+var barWallet = new sap.m.Bar("barWallet", {});
+walletP.setFooter(barWallet);
+var walletBut = new sap.m.Button("walletBut", {icon: "sap-icon://save", press: function (oEvent) {
+
+    updateWallet();
+
+}});
+barWallet.addContentRight(walletBut);
+var walletHeader = new sap.m.ObjectHeader("walletName", {
+    title: "{/Coin}",
+    number: "{/Balance}",
+    numberUnit: "{/Coin}",
+    icon: "{/icon}",
+    iconDensityAware: false
 });
-
-var filterItm = new sap.ui.unified.ShellHeadItem({
-    tooltip: "Filter",
-    icon: sap.ui.core.IconPool.getIconURI("filter"),
-    press: function () {
-        filterItm.setSelected(!filterItm.getSelected());
-    }
+walletP.addContent(walletHeader);
+var walletList = new sap.m.List("walletList", {
+    headerText: "Wallet Address",
+    items: [
+        new sap.m.InputListItem({
+            label: "Wallet Address",
+            content: new sap.m.Input({
+                placeholder: "Address",
+                value: "{/Wallet}",
+                type: sap.m.InputType.Text
+            })
+        }),
+        new sap.m.InputListItem({
+            label: "Wallet Name",
+            content: new sap.m.Input({
+                placeholder: "Name",
+                value: "{/WalletName}",
+                type: sap.m.InputType.Text
+            })
+        })
+    ]
 });
+walletP.addContent(walletList);
 
-var closeItm = new sap.ui.unified.ShellHeadItem({
-    tooltip: "Close",
-    icon: sap.ui.core.IconPool.getIconURI("decline"),
-    press: function () {
-        oShell.setShowCurtain(false);
-        setState(oldState);
-    }
-});
+//INIT
+setTimeout(function () {
 
-var logoffItm = new sap.ui.unified.ShellHeadItem({
-    tooltip: "Logoff",
-    icon: sap.ui.core.IconPool.getIconURI("log"),
-    press: function () {
-    }
-});
+    getOnlinealtList();
+}, 1);
 
+//FUNCTIONS
 
-var oDialog = new sap.ui.commons.Dialog({
-    width: "200px",
-    height: "200px",
-    title: "Dialog"
-});
-
-var oCntnt = {
-//    "SEARCH": {
-//        curt: [
-//            new CurtainContent("CurtainContent", {
-//                text: "Title",
-//                content: [
-//                    new sap.ui.commons.Button({
-//                        text: "Focussable Button #1",
-//                        press: function () {
-//                            alert("Yay, you pressed a button...");
-//                        }
-//                    }),
-//                    new sap.ui.commons.TextView({text: "This is the search screen\n\n" + sLorem})
-//                ]
-//            })
-//        ],
-//        curtPane: [
-//            new sap.ui.commons.Button({
-//                text: "Focussable Pane Button #1",
-//                press: function () {
-//                    alert("Yay, you pressed a button...");
-//                }
-//            }),
-//            new sap.ui.commons.TextView({text: "Configure the search screen ...\n\n" + sLorem})
-//        ],
-//        items: [curtainConfigItm, homeItm],
-//        rightItems: [filterItm, closeItm, logoffItm]
-//    },
-        "HOME": {
-            pane: [
-                new sap.m.Page({
-//                    title: "Title",
-                    showNavButton: false,
-                    subHeader: new sap.m.Bar({
-                        contentMiddle: [
-                            new sap.m.Button({
-                                text: "history",
-                                type: sap.m.ButtonType.Transparent,
-                                width: "100%"
-                            })
-                        ]
-                    })
-                })
-            ],
-            cntnt: [
-//                new sap.ui.commons.Button({
-//                    text: "Click to open App 1",
-//                    press: function () {
-//                        setState("APP1");
-//                    }
-//                }),
-//                new sap.m.Button("super", {text: "bouton"}),
-//                new sap.ui.commons.Button({
-//                    text: "Click to open App 2",
-//                    press: function () {
-//                        setState("APP2");
-//                    }
-//                }),
-//                new sap.ui.commons.Button({
-//                    text: "Open a dialog",
-//                    press: function () {
-//                        oDialog.open();
-//                    }
-//                }),
-//            new sap.m.CustomTile({
-//                content: util.UiFactory.createDescription('Tile based entry pages are a modern design pattern allowing the user to quickly get an overview, understand the system status and navigate to the places where action is required', 'OnlyTop')
-//            }),
-                new sap.m.Page({
-                    title: "Easy Pognon",
-                    content: [
-                        new sap.m.ObjectHeader({
-                            title: "David",
-                            number: "100",
-                            numberUnit: "BTC",
-                            attributes: [
-                                new sap.m.ObjectAttribute({
-                                    text: "mail"
-                                }),
-                                new sap.m.ObjectAttribute({
-                                    text: "www.sap.com",
-                                    active: true,
-                                    press: function () {
-                                        sap.m.URLHelper.redirect("http://www.sap.com", true);
-                                    }
-                                })
-                            ]
-                        })
-                    ]
-                })
-            ],
-            items: [configItm],
-            rightItems: [logoffItm]
-        },
-        "APP1": {
-            cntnt: [new sap.ui.commons.TextView({text: "This is App 1\n\n" + sLorem})],
-            items: [homeItm],
-            rightItems: [logoffItm]
-        },
-        "APP2": {
-            cntnt: [new sap.ui.commons.TextView({text: "This is App 2\n\n" + sLorem})],
-            items: [homeItm],
-            rightItems: [logoffItm]
+function getOnlinefiltersTab(value) {
+    $.ajax({
+        type: "POST",
+        url: "ws/miners-json.php?user=<?php echo htmlentities($_SESSION['username']); ?>&format=json",
+        dataType: "json",
+        success: function (data) {
+            modelfiltersTab.setData(data.miners);
         }
-    }
-    ;
-
-function applyContent() {
-    var cntnt = oCntnt[state];
-
-    if (cntnt.pane) {
-        oShell.removeAllPaneContent();
-        for (var i = 0; i < cntnt.pane.length; i++) {
-            oShell.addPaneContent(cntnt.pane[i]);
-        }
-    }
-//    if (cntnt.curtPane) {
-//        oShell.removeAllCurtainPaneContent();
-//        for (var i = 0; i < cntnt.curtPane.length; i++) {
-//            oShell.addCurtainPaneContent(cntnt.curtPane[i]);
-//        }
-//    }
-//    if (cntnt.curt) {
-//        oShell.removeAllCurtainContent();
-//        for (var i = 0; i < cntnt.curt.length; i++) {
-//            oShell.addCurtainContent(cntnt.curt[i]);
-//        }
-//    }
-    if (cntnt.cntnt) {
-        oShell.removeAllContent();
-        for (var i = 0; i < cntnt.cntnt.length; i++) {
-            oShell.addContent(cntnt.cntnt[i]);
-        }
-    }
-    if (cntnt.items) {
-        oShell.removeAllHeadItems();
-        for (var i = 0; i < cntnt.items.length; i++) {
-            oShell.addHeadItem(cntnt.items[i]);
-        }
-    }
-    if (cntnt.rightItems) {
-        oShell.removeAllHeadEndItems();
-        for (var i = 0; i < cntnt.rightItems.length; i++) {
-            oShell.addHeadEndItem(cntnt.rightItems[i]);
-        }
-    }
+    });
 }
-;
 
-function setState(sState) {
-    switch (sState) {
-//        case "SEARCH":
-//            oShell.setShowCurtain(true);
-//            oldState = state;
-//            break;
-        case "APP1":
-        case "APP2":
-            oShell.setShowCurtain(false);
-            oShell.setShowPane(false);
-            oShell.setHeaderHiding(true);
-            break;
-        case "HOME":
-        default:
-            sState = "HOME";
-            oShell.setHeaderHiding(false);
-            oShell.setShowCurtain(false);
-            break;
-    }
-    configItm.setSelected(false);
-    filterItm.setSelected(false);
-
-    state = sState;
-    applyContent();
+function reloadfiltersTab(value) {
+    getOnlinefiltersTab(value);
 }
-;
 
-var oShell = new sap.ui.unified.Shell({
-//    icon: jQuery.sap.getModulePath("sap.ui.core", '/') + "mimes/logo/sap_73x36.gif",
-    icon: "images/easypognon73x36.jpg",
-    headerHiding: false,
-    showPane: true
-//    search: new SearchFieldPlaceHolder("sf", {
-//        search: function (oEvent) {
-//            if (state != "SEARCH") {
-//                setState("SEARCH");
-//            }
-//        }
-//    })
-});
-oShell.placeAt("content");
+function getOnlinealtList(value) {
+    $.ajax({
+        type: "POST",
+        url: "ws/miners-json.php?user=<?php echo htmlentities($_SESSION['username']); ?>&format=json",
+        dataType: "json",
+        success: function (data) {
+            modelaltList.setData(data[0].miners);
+            modelfiltersTab.setData(data[1].filters);
+            App.to("main");
+        }
+    });
+}
 
-setState("HOME");
+function reloadaltList(value) {
+    getOnlinealtList(value);
+}
+
+function getOnlineTransactions(value) {
+    $.ajax({
+        type: "POST",
+        url: "ws/transactions-json.php?user=<?php echo htmlentities($_SESSION['username']); ?>&coin=" + value + "&format=json",
+        dataType: "json",
+        success: function (data) {
+            modeltxList.setData(data.transactions);
+            App.to("transactions");
+        }
+    });
+}
+
+function updateWallet(value) {
+    $.ajax({
+        type: "POST",
+        url: "ws/update-wallet.php",
+        dataType: "json",
+        data: walletModel.getJSON(),
+        success: function (data) {
+            if (data) {
+                getOnlinealtList();
+            }
+        }
+    });
+}
 
 
 </script>
