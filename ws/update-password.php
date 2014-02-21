@@ -14,15 +14,13 @@ $con = mysql_connect(HOST, USER, PASSWORD) or die('Cannot connect to the DB');
 
 mysql_select_db(DATABASE, $con) or die('Cannot select the DB');
 
-$Wallet = $obj->{'Wallet'};
+$User = $obj->{'User'};
 
-$WalletName = $obj->{'WalletName'};
+$Password = $obj->{'Password'};
 
-$Miner = $obj->{'Name'};
+$Salt = $obj->{'Salt'};
 
-$Coin = $obj->{'Coin'};
-
-$query = "UPDATE miners SET Wallet='{$Wallet}', WalletName='{$WalletName}' WHERE Name='$Miner' AND Coin='$Coin'";
+$query = "UPDATE members SET password='{$Password}' , salt='{$Salt}' WHERE username='$User'";
 
 $result = mysql_query($query, $con) or die('Errant query:  ' . $query);
 

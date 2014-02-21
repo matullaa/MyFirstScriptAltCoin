@@ -1,34 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="062f57a4-bdf8-4f24-8216-97c63482ff6b" name="Default" comment="Login commit&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Bitcoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Fastcoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Globalcoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Grandcoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Litecoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Lottocoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Novacoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bbqcoin.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bbqcoin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/wallet.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4paiement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/formatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ws/transactions-json.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ws/update-wallet.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\db_connect.php" afterPath="$PROJECT_DIR$/include/db_connect.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\functions.php" afterPath="$PROJECT_DIR$/include/functions.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\logout.php" afterPath="$PROJECT_DIR$/include/logout.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\process_login.php" afterPath="$PROJECT_DIR$/include/process_login.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\psl-config.php" afterPath="$PROJECT_DIR$/include/psl-config.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\recaptchalib.php" afterPath="$PROJECT_DIR$/include/recaptchalib.php" />
-      <change type="MOVED" beforePath="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes\register.inc.php" afterPath="$PROJECT_DIR$/include/register.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+    <list default="true" id="062f57a4-bdf8-4f24-8216-97c63482ff6b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/include/jsonRPCClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ws/update-password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4paiement.php" afterPath="$PROJECT_DIR$/4paiement.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ws/miners-json.php" afterPath="$PROJECT_DIR$/ws/miners-json.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page.php" afterPath="$PROJECT_DIR$/protected_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected_page_old.php" afterPath="$PROJECT_DIR$/protected_page_old.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ws/transactions-json.php" afterPath="$PROJECT_DIR$/ws/transactions-json.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ws/update-wallet.php" afterPath="$PROJECT_DIR$/ws/update-wallet.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MyFirstScript.iws" />
@@ -52,50 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="protected_page.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="protected_page.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="40" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="5100">
+            <state line="136" column="18" selection-start="5191" selection-end="5191" vertical-scroll-proportion="0.4822064" vertical-offset="2041" max-vertical-offset="5848">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="miners-json.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ws/miners-json.php">
+      <file leaf-file-name="update-password.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ws/update-password.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="53" selection-start="1362" selection-end="1362" vertical-scroll-proportion="-0.0" vertical-offset="680" max-vertical-offset="1751">
+            <state line="22" column="51" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="680">
               <folding>
-                <marker date="1392901320737" expanded="true" signature="836:872" placeholder="SELECT * FRO..miners..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4paiement.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/4paiement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3740">
-              <folding>
-                <marker date="1392310495000" expanded="true" signature="533:665" placeholder="SELECT `Name..." />
-                <marker date="1392310495000" expanded="true" signature="1526:1599" placeholder="SELECT Coin,..miners..." />
-                <marker date="1392310495000" expanded="true" signature="3004:3171" placeholder="INSERT INTO ..." />
-                <marker date="1392310495000" expanded="true" signature="3505:3584" placeholder="UPDATE miner..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/include/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.044386424" vertical-offset="731" max-vertical-offset="3451">
-              <folding>
-                <marker date="1391349445388" expanded="true" signature="1069:1164" placeholder="SELECT id, u..members..." />
-                <marker date="1391349445388" expanded="true" signature="3116:3221" placeholder="INSERT INTO ..." />
-                <marker date="1391349445388" expanded="true" signature="3688:3797" placeholder="..." />
-                <marker date="1391349445388" expanded="true" signature="3693:3797" placeholder="..." />
-                <marker date="1391349445388" expanded="true" signature="4586:4711" placeholder="SELECT passw..members..." />
+                <marker date="1393001586557" expanded="true" signature="386:467" placeholder="UPDATE membe..." />
               </folding>
             </state>
           </provider>
@@ -104,20 +55,9 @@
       <file leaf-file-name="update-wallet.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ws/update-wallet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="74" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="527">
+            <state line="7" column="9" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="714">
               <folding>
-                <marker date="1392887097699" expanded="true" signature="409:465" placeholder="SELECT * FRO..transactions..." />
-                <marker date="1392887097699" expanded="true" signature="558:778" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="558:779" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="558:636" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:809" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:891" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:853" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:852" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:825" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:824" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:815" placeholder="UPDATE miner..." />
-                <marker date="1392887097699" expanded="true" signature="791:892" placeholder="UPDATE miner..." />
+                <marker date="1392997393889" expanded="true" signature="420:521" placeholder="UPDATE miner..." />
               </folding>
             </state>
           </provider>
@@ -163,12 +103,14 @@
         <option value="$PROJECT_DIR$/includes/psl-config.php" />
         <option value="$PROJECT_DIR$/ws/test-jsonp.php" />
         <option value="$PROJECT_DIR$/includes/register.inc.php" />
-        <option value="$PROJECT_DIR$/ws/transactions-json.php" />
         <option value="$PROJECT_DIR$/js/functions.js" />
         <option value="$PROJECT_DIR$/js/formatter.js" />
-        <option value="$PROJECT_DIR$/ws/update-wallet.php" />
-        <option value="$PROJECT_DIR$/protected_page.php" />
         <option value="$PROJECT_DIR$/ws/miners-json.php" />
+        <option value="$PROJECT_DIR$/ws/transactions-json.php" />
+        <option value="$PROJECT_DIR$/ws/update-wallet.php" />
+        <option value="$PROJECT_DIR$/4paiement.php" />
+        <option value="$PROJECT_DIR$/ws/update-password.php" />
+        <option value="$PROJECT_DIR$/protected_page.php" />
       </list>
     </option>
   </component>
@@ -214,6 +156,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -232,14 +175,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ws" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyFirstScript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="include" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="http.proxy" />
+    <property name="options.lastSelected" value="Configurable.PHP.Servers" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SAPUI5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -251,11 +235,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\ws" />
+      <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\include" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\images" />
-      <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\ws" />
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\css" />
-      <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\styles" />
@@ -265,16 +249,28 @@
       <recent name="C:\Users\r5596333\WorkSpaceStorm\MyFirstScript\includes" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.miners-json.php">
-    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost/devWallet/index.php">
-      <RunnerSettings RunnerId="JavascriptDebugRunner" />
-      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.transactions-json.php">
     <configuration default="false" name="miners-json.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/ws/miners-json.php">
       <method />
     </configuration>
     <configuration default="false" name="miners-json.php" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost/devWallet/ws/miners-json.php">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="4paiement.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/4paiement.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="transactions-json.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/ws/transactions-json.php">
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="transactions-json.php" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost/devWallet/ws/transactions-json.php">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
@@ -321,16 +317,20 @@
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="a9a042b2-de17-4007-a0c8-147d39eb0e96" server_name="localhost">
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Script.miners-json.php" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.miners-json.php" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.miners-json.php" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.miners-json.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.4paiement.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.transactions-json.php" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.transactions-json.php" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.miners-json.php" />
-        <item index="1" class="java.lang.String" itemvalue="PHP Script.miners-json.php" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.transactions-json.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.transactions-json.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.4paiement.php" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.miners-json.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.miners-json.php" />
       </list>
     </recent_temporary>
   </component>
@@ -374,31 +374,35 @@
       <created>1391933580277</created>
       <updated>1391933580277</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Login commit&#10;">
+      <created>1392917762162</created>
+      <updated>1392917762163</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17592593" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27006173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.77623457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26812688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4336" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.776" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1738437" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -451,20 +455,10 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/include/db_connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="136" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1666" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/process_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="442" />
@@ -580,11 +574,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/forms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/login-box.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="19" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105" />
@@ -610,16 +599,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sha512.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="348" selection-end="349" vertical-scroll-proportion="-6.8" vertical-offset="0" max-vertical-offset="8262" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/psl-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="36" selection-start="267" selection-end="267" vertical-scroll-proportion="0.19966443" vertical-offset="0" max-vertical-offset="596" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/db_connect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="51" selection-start="94" selection-end="124" vertical-scroll-proportion="0.05704698" vertical-offset="0" max-vertical-offset="596" />
@@ -627,9 +606,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/formatter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="32" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.57073957" vertical-offset="682" max-vertical-offset="1751">
-          <folding />
-        </state>
+        <state line="61" column="32" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.57073957" vertical-offset="682" max-vertical-offset="1751" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ShellTestPage.js">
@@ -637,80 +614,24 @@
         <state line="76" column="43" selection-start="2640" selection-end="2683" vertical-scroll-proportion="0.0" vertical-offset="857" max-vertical-offset="1479" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="13" selection-start="1637" selection-end="1637" vertical-scroll-proportion="-34.653847" vertical-offset="0" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="1" selection-start="591" selection-end="591" vertical-scroll-proportion="8.5" vertical-offset="561" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected_page_old.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="27.461538" vertical-offset="714" max-vertical-offset="5015">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="27.461538" vertical-offset="714" max-vertical-offset="5015" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/process_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="0.36876357" vertical-offset="0" max-vertical-offset="461">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/register.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="9" selection-start="2496" selection-end="2496" vertical-scroll-proportion="2.3232105" vertical-offset="0" max-vertical-offset="1224">
-          <folding />
-        </state>
+        <state line="63" column="9" selection-start="2496" selection-end="2496" vertical-scroll-proportion="2.3232105" vertical-offset="0" max-vertical-offset="1224" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/register_success.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="0" selection-end="308" vertical-scroll-proportion="0.42323652" vertical-offset="0" max-vertical-offset="482">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ws/transactions-json.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="150" selection-start="961" selection-end="1107" vertical-scroll-proportion="-9.153846" vertical-offset="255" max-vertical-offset="1598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ws/update-wallet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="74" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="527">
-          <folding>
-            <marker date="1392887097699" expanded="true" signature="409:465" placeholder="SELECT * FRO..transactions..." />
-            <marker date="1392887097699" expanded="true" signature="558:778" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="558:779" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="558:636" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:809" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:891" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:853" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:852" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:825" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:824" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:815" placeholder="UPDATE miner..." />
-            <marker date="1392887097699" expanded="true" signature="791:892" placeholder="UPDATE miner..." />
-          </folding>
-        </state>
+        <state line="12" column="7" selection-start="0" selection-end="308" vertical-scroll-proportion="0.42323652" vertical-offset="0" max-vertical-offset="482" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/images/bbqcoin.png">
@@ -723,44 +644,83 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected_page.php">
+    <entry file="file://$PROJECT_DIR$/include/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="40" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="5100">
-          <folding />
-        </state>
+        <state line="44" column="0" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.044386424" vertical-offset="731" max-vertical-offset="3451" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ws/miners-json.php">
+    <entry file="file://$PROJECT_DIR$/include/jsonRPCClient.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="53" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1751">
-          <folding>
-            <marker date="1392901320737" expanded="true" signature="836:872" placeholder="SELECT * FRO..miners..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="32" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1088" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sha512.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="9" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0" vertical-offset="4595" max-vertical-offset="8143" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/psl-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="32" selection-start="392" selection-end="392" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="306" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/4paiement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3740">
+        <state line="100" column="0" selection-start="1775" selection-end="1775" vertical-scroll-proportion="1.85" vertical-offset="664" max-vertical-offset="4335" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ws/transactions-json.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="3" selection-start="81" selection-end="81" vertical-scroll-proportion="0.15178572" vertical-offset="0" max-vertical-offset="2091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ws/miners-json.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="10" selection-start="2759" selection-end="2759" vertical-scroll-proportion="3.4" vertical-offset="0" max-vertical-offset="2414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="117" selection-start="1873" selection-end="1956" vertical-scroll-proportion="-15.038462" vertical-offset="612" max-vertical-offset="1394" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/process_login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="10" selection-start="279" selection-end="279" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/forms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="26" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ws/update-wallet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="9" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="714">
           <folding>
-            <marker date="1392310495000" expanded="true" signature="533:665" placeholder="SELECT `Name..." />
-            <marker date="1392310495000" expanded="true" signature="1526:1599" placeholder="SELECT Coin,..miners..." />
-            <marker date="1392310495000" expanded="true" signature="3004:3171" placeholder="INSERT INTO ..." />
-            <marker date="1392310495000" expanded="true" signature="3505:3584" placeholder="UPDATE miner..." />
+            <marker date="1392997393889" expanded="true" signature="420:521" placeholder="UPDATE miner..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/functions.php">
+    <entry file="file://$PROJECT_DIR$/ws/update-password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.044386424" vertical-offset="731" max-vertical-offset="3451">
+        <state line="22" column="51" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="680">
           <folding>
-            <marker date="1391349445388" expanded="true" signature="1069:1164" placeholder="SELECT id, u..members..." />
-            <marker date="1391349445388" expanded="true" signature="3116:3221" placeholder="INSERT INTO ..." />
-            <marker date="1391349445388" expanded="true" signature="3688:3797" placeholder="..." />
-            <marker date="1391349445388" expanded="true" signature="3693:3797" placeholder="..." />
-            <marker date="1391349445388" expanded="true" signature="4586:4711" placeholder="SELECT passw..members..." />
+            <marker date="1393001586557" expanded="true" signature="386:467" placeholder="UPDATE membe..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="18" selection-start="5191" selection-end="5191" vertical-scroll-proportion="0.4822064" vertical-offset="2041" max-vertical-offset="5848">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -18,8 +18,9 @@ sec_session_start();
     <script>document.title = "Easy Pognon"</script>
     <script src="js/formatter.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/sha512.js"></script>
 </head>
-
 
 <body class="sapUiBody"><h3
     style="font-size:20px;left:30%;opacity:0.3;position:absolute;bottom:75px;z-index:9999;text-shadow:none;"></h3>
@@ -32,6 +33,7 @@ sec_session_start();
 
 //GLOBALS
 var walletModel;
+var jsonPassword;
 var Shell = sap.m.Shell("Shell", {title: ""});
 Shell.placeAt("MobileContent");
 var App = new sap.m.App("App", {});
@@ -40,11 +42,20 @@ var easyTitle = "<?php echo htmlentities($_SESSION['username']); ?> Easy Pognon 
 var main = new sap.m.Page("main", {title: easyTitle});
 App.addPage(main);
 var barMain = new sap.m.Bar("barMain", {});
-main.setFooter(barMain);
+main.setCustomHeader(barMain);
 var settingsBut = new sap.m.Button("settingsBut", {icon: "sap-icon://settings", press: function (oEvent) {
     App.to("settings", "flip");
 }});
 barMain.addContentRight(settingsBut);
+var title = new sap.m.Label("title", {text: easyTitle});
+//var title = new sap.m.Label("title", {text: "Easy Pognon"});
+barMain.addContentMiddle(title);
+var goOut = new sap.m.Button("goOut", {icon: "sap-icon://response", press: function (oEvent) {
+    var l_loginurl = 'include/logout.php';
+    sap.m.URLHelper.redirect(l_loginurl, false);
+}});
+
+barMain.addContentLeft(goOut);
 
 //***************** Filters main page
 var filtersTab = new sap.m.IconTabBar("filtersTab", {selectedKey: "{COIN}", select: function (oEvent) {
@@ -62,7 +73,7 @@ main.addContent(filtersTab);
 var modelfiltersTab = new sap.ui.model.json.JSONModel();
 filtersTab.setModel(modelfiltersTab);
 //var filter = new sap.m.IconTabFilter("filter", {icon: "sap-icon://save", key: "{Coin}", text: "{Coin}"});
-var filter = new sap.m.IconTabFilter("filter", {icon: "{icon}", key: "{Coin}", text: "{Coin}"});
+var filter = new sap.m.IconTabFilter("filter", {icon: "sap-icon://money-bills", key: "{Coin}", text: "{Coin}"});
 filtersTab.bindAggregation("items", "/", filter);
 //******************** End Filters
 
@@ -72,6 +83,7 @@ main.addContent(altList);
 var modelaltList = new sap.ui.model.json.JSONModel();
 altList.setModel(modelaltList);
 var itemsAlt = new sap.m.ObjectListItem("items", {
+//    icon: "sap-icon://money-bills",
     icon: "{icon}",
 //    intro: "{Wallet}",
     intro: {
@@ -110,8 +122,23 @@ var settings = new sap.m.Page("settings", {navButtonType: "Back", showHeader: tr
     App.back("main");
 }});
 App.addPage(settings);
-var userSettings = new sap.m.List("userSettings", { headerText: "User Settings"});
-settings.addContent(userSettings);
+var password = new sap.m.Input("password", {placeholder: "Change Password", type: "Password"});
+settings.addContent(password);
+var barSettings = new sap.m.Bar("barSettings", {});
+settings.addContent(barSettings);
+var saveSettings = new sap.m.Button("saveSettings", {icon: "sap-icon://save", text: "Save Password", press: function (oEvent) {
+    hash_value = hex_sha512(password.getValue());
+    var passupdate = {};
+    passupdate.User = "<?php echo htmlentities($_SESSION['username']); ?>";
+    passupdate.Password = hash_value;
+    passupdate.Salt = hash_value;
+    jsonPassword = JSON.stringify(passupdate);
+//    updatePassword();
+    App.back("main");
+}});
+
+barSettings.addContentMiddle(saveSettings);
+
 //*************** End user Settings
 
 
@@ -281,12 +308,29 @@ function updateWallet(value) {
         data: walletModel.getJSON(),
         success: function (data) {
             if (data) {
+                jQuery.sap.require("sap.m.MessageToast");
+                sap.m.MessageToast.show("Data Saved", {duration: 1000});
                 getOnlinealtList();
             }
         }
     });
 }
 
+function updatePassword(value) {
+    $.ajax({
+        type: "POST",
+        url: "ws/update-password.php",
+        dataType: "json",
+        data: jsonPassword,
+        success: function (data) {
+            if (data) {
+                jQuery.sap.require("sap.m.MessageToast");
+                sap.m.MessageToast.show("Data Saved", {duration: 1000});
+                getOnlinealtList();
+            }
+        }
+    });
+}
 
 </script>
 
